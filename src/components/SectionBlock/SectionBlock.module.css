@@ -1,7 +1,6 @@
 .section {
-    height: 700px;
     margin: 0 auto 20px auto;
-    width: 85%;
+    max-width: 1600px;
 }
 
 .section:first-child {
@@ -18,23 +17,20 @@
 .sectionNav {
     display: flex;
     gap: 20px;
-    height: 10%;
     padding: 20px;
 }
 
 .sectionButton {
     border-radius: 10px;
     border: 1px solid #352838;
-    height: 80%;
-    width: 100px;
+    padding: 20px;
     background-color: var(--hover-bg-color);
     color: var(--bg-color);
     transition: background-color 1s ease, color 1s ease;
 }
 
 .sectionText {
-    height: 80%;
-    width: 80%;
+    padding: 20px;
     background-color: #352838;
 }
 

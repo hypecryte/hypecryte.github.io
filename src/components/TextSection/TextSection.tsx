@@ -91,43 +91,44 @@ export const TextSection: React.FC = () => {
                 {activeTab === "tables" && (
                     <div className={styles.tabContent}>
                         <h3 className={styles.contentTitle}>Варианты интерактивных таблиц</h3>
-
-                        <table className={styles.customTable}>
-                            <thead>
-                            <tr>
-                                <th>Сотрудник</th>
-                                <th>Роль в проекте</th>
-                                <th>Текущий статус</th>
-                                <th>Эффективность</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td><strong>Алликсаар</strong></td>
-                                <td>Тимлид / Архитектор</td>
-                                <td><span className={`${styles.statusBadge} ${styles.statusActive}`}>В сети</span></td>
-                                <td className={styles.tableNumeric}>98%</td>
-                            </tr>
-                            <tr>
-                                <td>Станислав</td>
-                                <td>Клитотехник разработчик</td>
-                                <td><span className={`${styles.statusBadge} ${styles.statusAway}`}>Отошел</span></td>
-                                <td className={styles.tableNumeric}>85%</td>
-                            </tr>
-                            <tr>
-                                <td>Александр Троян</td>
-                                <td>Фронтенд инженер</td>
-                                <td><span className={`${styles.statusBadge} ${styles.statusActive}`}>В сети</span></td>
-                                <td className={styles.tableNumeric}>92%</td>
-                            </tr>
-                            <tr>
-                                <td>Игорь Зверёк</td>
-                                <td>QA тестировщик</td>
-                                <td><span className={`${styles.statusBadge} ${styles.statusOffline}`}>Оффлайн</span></td>
-                                <td className={styles.tableNumeric}>74%</td>
-                            </tr>
-                            </tbody>
-                        </table>
+                        <div className={styles.tableShowcaseContainer}>
+                            <table className={styles.customTable}>
+                                <thead>
+                                    <tr>
+                                        <th>Сотрудник</th>
+                                        <th>Роль в проекте</th>
+                                        <th>Текущий статус</th>
+                                        <th>Эффективность</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>Алликсаар</strong></td>
+                                        <td>Тимлид / Архитектор</td>
+                                        <td><span className={`${styles.statusBadge} ${styles.statusActive}`}>В сети</span></td>
+                                        <td className={styles.tableNumeric}>98%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Станислав</td>
+                                        <td>Клитотехник разработчик</td>
+                                        <td><span className={`${styles.statusBadge} ${styles.statusAway}`}>Отошел</span></td>
+                                        <td className={styles.tableNumeric}>85%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Александр Троян</td>
+                                        <td>Фронтенд инженер</td>
+                                        <td><span className={`${styles.statusBadge} ${styles.statusActive}`}>В сети</span></td>
+                                        <td className={styles.tableNumeric}>92%</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Игорь Зверёк</td>
+                                        <td>QA тестировщик</td>
+                                        <td><span className={`${styles.statusBadge} ${styles.statusOffline}`}>Оффлайн</span></td>
+                                        <td className={styles.tableNumeric}>74%</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 )}
             </div>

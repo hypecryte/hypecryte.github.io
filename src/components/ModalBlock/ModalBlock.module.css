@@ -6,9 +6,8 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     max-width: 900px;
-    width: 100%;
-    height: 700px;
-    margin: 20px auto;
+    padding: 30px;
+    margin: 40px auto;
     box-sizing: border-box;
 }
 
@@ -34,7 +33,9 @@
     letter-spacing: 0.5px;
 }
 
-.blackButton, .modalButton, .plainButton {
+.blackButton,
+.modalButton,
+.plainButton {
     height: 46px;
     padding: 0 24px;
     border-radius: 6px;
@@ -55,33 +56,44 @@
     color: #ffffff;
     border: 1px solid #000000;
 }
-.blackButton:hover { background-color: #222222; }
+
+.blackButton:hover {
+    background-color: #222222;
+}
 
 .modalButton {
     background-color: #007bff;
     color: #ffffff;
     border: 1px solid #007bff;
 }
-.modalButton:hover { background-color: #0056b3; }
+
+.modalButton:hover {
+    background-color: #0056b3;
+}
 
 .plainButton {
     background-color: #ffffff;
     color: #333333;
     border: 1px solid #cccccc;
 }
-.plainButton:hover { background-color: #f5f5f5; }
+
+.plainButton:hover {
+    background-color: #f5f5f5;
+}
 
 @media (max-width: 768px) {
     .container {
         grid-template-columns: 1fr;
         gap: 30px;
     }
+
     .column:not(:last-child) {
         border-right: none;
         border-bottom: 1px solid #e0e0e0;
         padding-bottom: 20px;
     }
 }
+
 /* Кнопка дизайнера */
 .plainButton {
     width: 100px;
@@ -91,8 +103,8 @@
     cursor: pointer;
 
     background-image: linear-gradient(0deg, #3c6598 0%, #4675a6 100%);
-    filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.4));
-    box-shadow: inset 0px 1px 0px rgba(255,255,255,0.2);
+    filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.4));
+    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.2);
 
     transition: background-image 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
 
@@ -104,12 +116,13 @@
         font-weight: bold;
         font-family: "Segoe UI", sans-serif;
         text-align: center;
-        filter: drop-shadow(0px -1px 0px rgba(0,0,0,0.4));
+        filter: drop-shadow(0px -1px 0px rgba(0, 0, 0, 0.4));
         transition: opacity 0.2s ease;
     }
+
     &:hover {
-        filter: drop-shadow(0px 2px 2px rgba(0,0,0,0.4)) brightness(1.2);
-        box-shadow: inset 0px 1px 0px rgba(255,255,255,0.2);
+        filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.4)) brightness(1.2);
+        box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.2);
         background-image: linear-gradient(0deg, #3c6598 0%, #4675a6 100%);
 
         & .btnText {
@@ -118,8 +131,8 @@
     }
 
     &:active {
-        filter: drop-shadow(0px 1px 0px rgba(255,255,255,0.27));
-        box-shadow: inset 0px 1px 2.5px rgba(0,0,0,0.4);
+        filter: drop-shadow(0px 1px 0px rgba(255, 255, 255, 0.27));
+        box-shadow: inset 0px 1px 2.5px rgba(0, 0, 0, 0.4);
         background-image: linear-gradient(0deg, #426c9c 0%, #3a6090 100%);
     }
 }
@@ -147,7 +160,8 @@
     bottom: 0;
     background-color: #ff4d4d;
     border-radius: 32px;
-    border: 2px solid #c7c7c7;    box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.4),
+    border: 2px solid #c7c7c7;
+    box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.4),
         inset 0px -2px 4px rgba(255, 255, 255, 0.2),
         0px 4px 8px rgba(0, 0, 0, 0.15),
         0px 1px 3px rgba(0, 0, 0, 0.1);
@@ -164,18 +178,18 @@
     background-color: #ff4d4d;
     border-radius: 50%;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3),
-    0px 1px 3px rgba(0, 0, 0, 0.2),
-    inset 0px -2px 3px rgba(0, 0, 0, 0.15);
+        0px 1px 3px rgba(0, 0, 0, 0.2),
+        inset 0px -2px 3px rgba(0, 0, 0, 0.15);
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.3s ease;
 }
 
-.CheckBoxBtn input:checked + .slider {
+.CheckBoxBtn input:checked+.slider {
     background-color: #2ecc71;
     box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.35),
-    inset 0px -2px 4px rgba(255, 255, 255, 0.2);
+        inset 0px -2px 4px rgba(255, 255, 255, 0.2);
 }
 
-.CheckBoxBtn input:checked + .slider::before {
+.CheckBoxBtn input:checked+.slider::before {
     transform: translateX(30px);
     background-color: #2ecc71;
 }
@@ -183,8 +197,7 @@
 .CheckBoxBtn:hover .slider {
     filter: brightness(1.05);
     box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.4),
-    inset 0px -2px 4px rgba(255, 255, 255, 0.2),
-    0px 6px 12px rgba(0, 0, 0, 0.2),
-    0px 2px 4px rgba(0, 0, 0, 0.1);
+        inset 0px -2px 4px rgba(255, 255, 255, 0.2),
+        0px 6px 12px rgba(0, 0, 0, 0.2),
+        0px 2px 4px rgba(0, 0, 0, 0.1);
 }
-

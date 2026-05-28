@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './FeedBackModal.module.css';
 
 interface FeedbackModalProps {
@@ -11,8 +11,25 @@ export const FeedbackModal = ({ isOpen, onClose }: FeedbackModalProps) => {
 
     const [moodColor, setMoodColor] = useState('#6a1b9a');
 
+    useEffect(() => {
+        const handleKeyDown = (event: KeyboardEvent) => {
+            if (event.key === 'Escape') {
+                onClose();
+            }
+        }
+        if (isOpen) {
+            document.addEventListener('keydown', handleKeyDown);
+        }
+
+        return () => {
+            document.removeEventListener('keydown', handleKeyDown);
+        }
+    }, [isOpen, onClose]);
+
+    if (!isOpen) return null;
+
     const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault(); 
+        e.preventDefault();
 
         console.log("Данные успешно отправлены!");
 
@@ -68,7 +85,7 @@ export const FeedbackModal = ({ isOpen, onClose }: FeedbackModalProps) => {
                                 <input type="checkbox" className={styles.checkboxInput} required />
                                 <span className={styles.checkboxText}>
                                     Соглашаюсь на всё, что бы вы не придумали и осознаю, что это может означать{' '}
-                                    <a href="/terms" className={styles.termsLink} onClick={(e) => e.stopPropagation()}>
+                                    <a href="/" className={styles.termsLink} onClick={(e) => e.stopPropagation()}>
                                         что угодно
                                     </a>
                                 </span>

@@ -6,10 +6,7 @@
     flex-direction: column;
     gap: 30px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-
-    margin: auto;
-    width: 90%;
-    height: 80%;
+    margin: 30px;
     justify-content: center;
     align-items: center;
 }
