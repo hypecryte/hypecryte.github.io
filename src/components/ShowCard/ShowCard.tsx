@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './ShowCard.module.css';
 
 interface ShowCardProps {

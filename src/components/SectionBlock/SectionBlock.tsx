@@ -1,11 +1,10 @@
-import React from 'react';
 import styles from './SectionBlock.module.css';
 
 interface SectionBlockProps {
     sectionText: string;
     bgSvg: string;
-    bgColor: string;
-    hoverBgColor: string;
+    bgColor?: string;     
+    hoverBgColor?: string;
     children?: React.ReactNode;
 }
 

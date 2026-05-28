@@ -1,5 +1,4 @@
-import React from 'react';
-import {ShowCard} from "../ShowCard/ShowCard.tsx";
+import { ShowCard } from "../ShowCard/ShowCard.tsx";
 import styles from './ShowcaseSection.module.css'; // Исправлена опечатка w
 
 export const ShowcaseSection = () => {

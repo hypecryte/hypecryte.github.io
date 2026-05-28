@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./Navbar.module.css";
 
 interface NavLink {
@@ -7,7 +6,6 @@ interface NavLink {
 }
 
 interface NavbarProps {
-    logoText: React.ReactNode;
     links: NavLink[];
 }
 
