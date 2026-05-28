@@ -1,0 +1,51 @@
+.buttonContainer {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+
+    margin: auto;
+    width: 90%;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+}
+
+.gridFirst {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 12px;
+    width: 50%;
+
+    & button {
+        width: 100%;
+    }
+}
+
+.gridSecond {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: auto;
+    gap: 12px;
+    width: 50%;
+    white-space: nowrap;
+
+
+    & button {
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .gridFirst {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .gridSecond {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

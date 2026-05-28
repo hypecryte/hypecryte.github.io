@@ -1,0 +1,63 @@
+/* Базовые стили секции */
+.section {
+    height: 700px;
+    margin: 0 auto 20px auto;
+    width: 85%;
+}
+
+.section:first-child {
+    margin-top: 70px;
+}
+
+.section h1 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    scroll-margin-top: 80px;
+    scroll-behavior: smooth;
+}
+
+.sectionNav {
+    display: flex;
+    gap: 20px;
+    height: 10%;
+    padding: 20px;
+}
+
+.sectionButton {
+    border-radius: 10px;
+    border: 1px solid #352838;
+    height: 80%;
+    width: 100px;
+    background-color: var(--hover-bg-color);
+    color: var(--bg-color);
+    transition: background-color 1s ease, color 1s ease;
+}
+
+.sectionText {
+    height: 80%;
+    width: 80%;
+    background-color: #352838;
+}
+
+/* Главный блок и его hover-эффект */
+.sectionBlock {
+    border: 1px solid #352838;
+    height: calc(90% - 30px);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    background-image: var(--bg-image);
+    transition: background-color 1s ease, background-image 1s ease;
+
+    &:hover {
+        background-color: var(--hover-bg-color);
+        background-image: var(--bg-image);
+        transition: background-color 1s ease, background-image 1s ease;
+        & .sectionBlock {
+            background-color: var(--bg-color);
+            color: var(--hover-bg-color);
+            transition: background-color 1s ease, background-image 1s ease
+        }
+    }
+}

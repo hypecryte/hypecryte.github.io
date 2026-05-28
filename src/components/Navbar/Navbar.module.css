@@ -1,0 +1,58 @@
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #352838;
+    color: white;
+    padding: 10px 20px;
+}
+.hero{
+    flex-basis: 40%;
+    & a {
+        color: white;
+        text-decoration: none;
+        font-size: 32px;
+        transition: color 0.2s ease;
+    }
+}
+.menu{
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    flex-basis: 70%;
+    & a{
+        color:white;
+        text-decoration: none;
+        font-size: 20px;
+        transition: color 0.2s ease;
+        &:hover{
+            text-decoration: underline solid;
+            color: gray;
+        }
+    }
+}
+.logoWrapper {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.logoTop {
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+}
+
+.logoBottom {
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #b0a4b5;
+    letter-spacing: 3px;
+}

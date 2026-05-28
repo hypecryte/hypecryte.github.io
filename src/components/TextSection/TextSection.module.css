@@ -1,0 +1,293 @@
+.TextSection {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sectionNav {
+    display: flex;
+    gap: 20px;
+    height: 10%;
+    padding: 20px;
+}
+
+.sectionButton {
+    border-radius: 10px;
+    border: 1px solid #352838;
+    height: 80%;
+    width: 120px; /* Немного увеличили ширину для адаптивности */
+    background-color: #73129f;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.sectionButton:not(.active):hover {
+    filter: brightness(1.2);
+    transform: translateY(-1px);
+}
+
+.sectionButton.active {
+    background-color: #352838 !important;
+    color: #fff !important;
+    border-color: #352838;
+    font-weight: bold;
+}
+
+.sectionText {
+    height: 80%;
+    border-radius: 20px;
+    width: 85%;
+    background-color: #fff;
+    align-self: center;
+    overflow-y: auto; /* Добавляем скролл, если контента много */
+    box-shadow: 0 4px 20px rgba(53, 40, 56, 0.08); /* Легкая тень для объема */
+}
+
+.tabContent {
+    padding: 35px;
+    color: #352838;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* --- ОБЩИЕ СТИЛИ КОНТЕНТА --- */
+.contentTitle {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 22px;
+    color: #352838;
+    border-bottom: 2px solid rgba(53, 40, 56, 0.1);
+    padding-bottom: 10px;
+}
+
+.subTitle {
+    margin: 20px 0 10px 0;
+    font-size: 16px;
+    color: #73129f;
+}
+
+/* --- СТИЛИ ТЕКСТА --- */
+.leadText {
+    font-size: 18px;
+    font-weight: 500;
+    color: #503d54;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.normalText {
+    margin-bottom: 20px;
+}
+
+.codeInline {
+    background-color: #f4f0f6;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    color: #a020f0;
+}
+
+.blockquote {
+    margin: 20px 0;
+    padding: 15px 20px;
+    background-color: #fbf9fc;
+    border-left: 4px solid #73129f;
+    font-style: italic;
+    border-radius: 0 8px 8px 0;
+}
+
+.blockquote cite {
+    display: block;
+    margin-top: 8px;
+    font-size: 13px;
+    color: #777;
+    font-style: normal;
+}
+
+.noteText {
+    font-size: 13px;
+    color: #666;
+    border-top: 1px dashed rgba(53, 40, 56, 0.1);
+    padding-top: 15px;
+}
+
+/* --- СТИЛИ СПИСКОВ --- */
+.bulletList, .orderedList, .checkList {
+    margin: 0 0 25px 0;
+    padding-left: 20px;
+}
+
+.bulletList li {
+    margin-bottom: 8px;
+    list-style-type: none;
+    position: relative;
+}
+
+/* Кастомный фиолетовый маркер-точка */
+.bulletList li::before {
+    content: "•";
+    color: #73129f;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    left: -15px;
+    top: -2px;
+}
+
+.orderedList li {
+    margin-bottom: 8px;
+    /* Стильные акцентные цифры */
+    list-style-type: decimal;
+    color: #352838;
+}
+
+.checkList {
+    list-style: none;
+    padding-left: 0;
+}
+
+.checkList li {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkIcon {
+    font-weight: bold;
+    color: #73129f;
+}
+
+/* --- СТИЛИ ТАБЛИЦ --- */
+.customTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.customTable th, .customTable td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.customTable th {
+    background-color: #f7f5f8;
+    color: #352838;
+    font-weight: 600;
+    border-bottom: 2px solid rgba(53, 40, 56, 0.15);
+}
+
+.customTable tbody tr {
+    transition: background-color 0.2s ease;
+}
+
+/* Подсветка всей строки при наведении */
+.customTable tbody tr:hover {
+    background-color: #fdfbfe;
+}
+
+.customTable td:hover {
+    background-color: rgba(115, 18, 159, 0.05);
+}
+
+.tableNumeric {
+    font-variant-numeric: tabular-nums;
+    text-align: right !important;
+    font-weight: 500;
+}
+
+/* Статусные бейджи */
+.statusBadge {
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.statusActive {
+    background-color: #e6f9f0;
+    color: #107c41;
+}
+
+.statusAway {
+    background-color: #fff8e6;
+    color: #b77c00;
+}
+
+.statusOffline {
+    background-color: #f5f5f5;
+    color: #666;
+}
+/* --- СТИЛИ СПИСКОВ --- */
+
+/* Контейнер-сетка для трех столбцов */
+.listsGrid {
+    display: grid;
+    /* Создает 3 равные колонки, которые автоматически подстраиваются под ширину */
+    grid-template-columns: repeat(3, 1fr);
+    /* Расстояние между столбцами */
+    gap: 30px;
+    margin-top: 15px;
+}
+
+/* Стили для каждого отдельного столбца */
+.listColumn {
+    background-color: #fbf9fc; /* Легкий фоновый цвет для выделения колонок */
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(53, 40, 56, 0.05);
+}
+
+/* Сбрасываем лишние нижние отступы у списков, так как теперь есть gap */
+.bulletList, .orderedList, .checkList {
+    margin: 0;
+    padding-left: 20px;
+}
+
+/* Оставляем старые стили для элементов списков без изменений */
+.bulletList li {
+    margin-bottom: 12px;
+    list-style-type: none;
+    position: relative;
+}
+
+.bulletList li::before {
+    content: "•";
+    color: #73129f;
+    font-weight: bold;
+    font-size: 20px;
+    position: absolute;
+    left: -15px;
+    top: -2px;
+}
+
+.orderedList li {
+    margin-bottom: 12px;
+    list-style-type: decimal;
+    color: #352838;
+}
+
+.checkList {
+    list-style: none;
+    padding-left: 0;
+}
+
+.checkList li {
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkIcon {
+    font-weight: bold;
+    color: #73129f;
+}
