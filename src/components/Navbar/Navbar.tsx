@@ -1,3 +1,4 @@
+import { useState } from "react";
 import styles from "./Navbar.module.css";
 
 interface NavLink {
@@ -10,6 +11,11 @@ interface NavbarProps {
 }
 
 export const Navbar: React.FC<NavbarProps> = ({ links }) => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => setIsOpen(!isOpen);
+    const closeMenu = () => setIsOpen(false);
+
     return (
         <nav className={styles.nav}>
             <div className={styles.hero}>
@@ -20,9 +26,20 @@ export const Navbar: React.FC<NavbarProps> = ({ links }) => {
                     </div>
                 </a>
             </div>
-            <div className={styles.menu}>
+
+            <button
+                className={`${styles.burgerButton} ${isOpen ? styles.burgerActive : ""}`}
+                onClick={toggleMenu}
+                aria-label="Открыть меню"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div className={`${styles.menu} ${isOpen ? styles.menuOpen : ""}`}>
                 {links.map((link, index) => (
-                    <a key={index} href={link.href}>
+                    <a key={index} href={link.href} onClick={closeMenu}>
                         {link.label}
                     </a>
                 ))}

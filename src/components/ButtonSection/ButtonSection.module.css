@@ -20,6 +20,8 @@
     grid-template-rows: repeat(4, auto);
     gap: 12px;
     width: 50%;
+    justify-content: center;
+    align-self: center;
 
     & button {
         width: 100%;
@@ -33,6 +35,8 @@
     gap: 12px;
     width: 50%;
     white-space: nowrap;
+    justify-content: center;
+    align-self: center;
 
 
     & button {
@@ -41,7 +45,7 @@
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .gridFirst {
         grid-template-columns: repeat(3, 1fr);
     }

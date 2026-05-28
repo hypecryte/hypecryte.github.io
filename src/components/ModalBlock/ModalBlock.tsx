@@ -31,7 +31,6 @@ export const ModalBlock = () => {
                 </label>
             </div>
 
-            {/* Подключаем изолированное модальное окно */}
             <FeedbackModal
                 isOpen={isModalOpen}
                 onClose={() => setIsModalOpen(false)}

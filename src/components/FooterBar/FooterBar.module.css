@@ -10,10 +10,9 @@
     margin-top: 20px;
 }
 
-/* НОВЫЙ БЛОК: Секция логотипа занимает половину ширины */
 .logoSection {
     display: flex;
-    justify-content: flex-end; /* Двигает логотип в правую часть своего блока */
+    justify-content: flex-end;
     flex: 1;
     margin-right: 140px;
 }
@@ -23,7 +22,7 @@
     flex-direction: column;
     line-height: 1.1;
     color: #ffffff;
-    text-align: right; /* Выравнивает текст внутри логотипа по правому краю */
+    text-align: right;
 }
 
 .logoTop {
@@ -40,11 +39,11 @@
     letter-spacing: 3px;
 }
 
-/* Секция контактов занимает вторую половину ширины */
+
 .contactsSection {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* ИЗМЕНЕНО: Ссылки теперь в левой части своего блока */
+    align-items: flex-start;
     gap: 12px;
     flex: 1;
 }

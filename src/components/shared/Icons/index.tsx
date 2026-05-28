@@ -1,6 +1,5 @@
 import React from 'react';
 
-// Общие пропсы для изменения размеров или цветов при желании
 interface IconProps extends React.SVGProps<SVGSVGElement> {}
 
 export const PencilIcon: React.FC<IconProps> = (props) => (

@@ -11,14 +11,12 @@ export const FeedbackModal = ({ isOpen, onClose }: FeedbackModalProps) => {
 
     const [moodColor, setMoodColor] = useState('#6a1b9a');
 
-    // Функция обработки отправки формы
     const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault(); // Запрещаем стандартную перезагрузку страницы
+        e.preventDefault(); 
 
-        // Здесь в будущем будет логика сбора и отправки данных на сервер
         console.log("Данные успешно отправлены!");
 
-        onClose(); // Закрываем модальное окно сразу после отправки
+        onClose();
     };
 
     return (
@@ -78,7 +76,6 @@ export const FeedbackModal = ({ isOpen, onClose }: FeedbackModalProps) => {
                         </div>
                     </div>
 
-                    {/* Единственная фиолетовая кнопка отправки-закрытия */}
                     <div className={styles.modalActions}>
                         <button type="submit" className={styles.purpleButton}>
                             Отправить все мои данные

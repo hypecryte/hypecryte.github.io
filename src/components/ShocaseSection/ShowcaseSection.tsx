@@ -1,11 +1,10 @@
 import { ShowCard } from "../ShowCard/ShowCard.tsx";
-import styles from './ShowcaseSection.module.css'; // Исправлена опечатка w
+import styles from './ShowcaseSection.module.css'
 
 export const ShowcaseSection = () => {
     return (
         <div className={styles.showcaseWrapper}>
             <div className={styles.showcaseContainer}>
-                {/* Передаем обязательные пропсы */}
                 <ShowCard
                     img="/cardAssets/3Dprintednotebook_207212a4-5555-4c82-8caf-d18b0ea685f7.webp"
                     title="Универсальная тетрадь, напечатанная на 3D принтере. Удобный и практичный материал и многофункциональный дизайн "
