@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FeedbackModal } from '../FeedbackModal/FeedBackModal';
 import styles from './ModalBlock.module.css';
 
