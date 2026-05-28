@@ -50,13 +50,13 @@ export const ButtonSection = () => {
             </div>
 
             <div className={styles.gridSecond}>
-                {/* Передаем иконки как JSX-теги, они будут автоматически подхватывать стили */}
-                <Button text="Редактировать" btnBgColor="#ebebeb" icon={<PencilIcon />} iconPosition="start" />
-                <Button text="Выгрузить в Excel" btnBgColor="#ebebeb" icon={<ExportIcon />} iconPosition="start" />
-                <Button text="Удалить список" btnBgColor="#ebebeb" icon={<TrashIcon />} iconPosition="start" />
-                <Button text="Распечатать" btnBgColor="#ebebeb" icon={<PrinterIcon />} iconPosition="start" />
-                <Button text="Загрузить из файла" btnBgColor="#ebebeb" icon={<ImportIcon />} iconPosition="start" />
+                <Button className={styles.isolatedButton} text="Редактировать" btnBgColor="#ebebeb" icon={<PencilIcon />} iconPosition="start" />
+                <Button className={styles.isolatedButton} text="Выгрузить в Excel" btnBgColor="#ebebeb" icon={<ExportIcon />} iconPosition="start" />
+                <Button className={styles.isolatedButton} text="Удалить список" btnBgColor="#ebebeb" icon={<TrashIcon />} iconPosition="start" />
+                <Button className={styles.isolatedButton} text="Распечатать" btnBgColor="#ebebeb" icon={<PrinterIcon />} iconPosition="start" />
+                <Button className={styles.isolatedButton} text="Загрузить из файла" btnBgColor="#ebebeb" icon={<ImportIcon />} iconPosition="start" />
             </div>
+
         </section>
     );
 };
