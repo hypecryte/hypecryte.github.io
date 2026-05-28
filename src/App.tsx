@@ -21,7 +21,7 @@ function App() {
     return (
         <>
             <Navbar links={menuLinks} />
-            <main style={{ display: 'grid', gap: '10px' }}>
+            <main>
                 <SectionBlock bgSvg={SVG_FIRST} sectionText="Текстовый блок">
                     <TextSection />
                 </SectionBlock>

@@ -45,6 +45,7 @@
     .gridFirst {
         grid-template-columns: repeat(3, 1fr);
     }
+
     .gridSecond {
         grid-template-columns: repeat(2, 1fr);
     }

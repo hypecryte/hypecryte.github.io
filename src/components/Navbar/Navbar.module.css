@@ -12,31 +12,37 @@
     color: white;
     padding: 10px 20px;
 }
-.hero{
+
+.hero {
     flex-basis: 40%;
+
     & a {
         color: white;
         text-decoration: none;
-        font-size: 32px;
+        font-size: 20px;
         transition: color 0.2s ease;
     }
 }
-.menu{
+
+.menu {
     display: flex;
     justify-content: flex-end;
     gap: 30px;
     flex-basis: 70%;
-    & a{
-        color:white;
+
+    & a {
+        color: white;
         text-decoration: none;
-        font-size: 20px;
+        font-size: 16px;
         transition: color 0.2s ease;
-        &:hover{
+
+        &:hover {
             text-decoration: underline solid;
             color: gray;
         }
     }
 }
+
 .logoWrapper {
     display: flex;
     flex-direction: column;
